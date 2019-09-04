@@ -4,10 +4,10 @@ import { VisibilityFilters } from '../actions'
 
 const Footer = () => (
   <div>
-    <span>Show: </span>
-    <FilterLink filter={VisibilityFilters.SHOW_ALL}>All</FilterLink>
-    <FilterLink filter={VisibilityFilters.SHOW_ACTIVE}>Active</FilterLink>
-    <FilterLink filter={VisibilityFilters.SHOW_COMPLETED}>Completed</FilterLink>
+    <span>Tampilkan: </span>
+    <FilterLink filter={VisibilityFilters.SHOW_ALL}>Semua</FilterLink>
+    <FilterLink filter={VisibilityFilters.SHOW_ACTIVE}>Aktif</FilterLink>
+    <FilterLink filter={VisibilityFilters.SHOW_COMPLETED}>Selesai</FilterLink>
   </div>
 )
 
