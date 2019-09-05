@@ -3,14 +3,15 @@ import { toggleTodo } from '../actions'
 import TodoList from '../components/TodoList'
 import { VisibilityFilters } from '../actions'
 
+
 const getVisibleTodos = (todos, filter) => {
   switch (filter) {
-    case VisibilityFilters.SHOW_ALL:
+    case VisibilityFilters.TAMPIL_SEMUA:
       return todos
-    case VisibilityFilters.SHOW_COMPLETED:
-      return todos.filter(t => t.completed)
-    case VisibilityFilters.SHOW_ACTIVE:
+    case VisibilityFilters.TAMPIL_AKTIF:
       return todos.filter(t => !t.completed)
+    case VisibilityFilters.TAMPIL_SELESAI:
+      return todos.filter(t => t.completed)
     default:
       throw new Error('Unknown filter: ' + filter)
   }

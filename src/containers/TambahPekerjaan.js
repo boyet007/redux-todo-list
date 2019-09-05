@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { addTodo } from '../actions'
+import { tambahPekerjaan } from '../actions'
 
-const AddTodo = ({ dispatch }) => {
+const TambahPekerjaan = ({ dispatch }) => {
   let input
 
   return (
@@ -13,7 +13,7 @@ const AddTodo = ({ dispatch }) => {
           if (!input.value.trim()) {
             return
           }
-          dispatch(addTodo(input.value))
+          dispatch(tambahPekerjaan(input.value))
           input.value = ''
         }}
       >
@@ -24,4 +24,4 @@ const AddTodo = ({ dispatch }) => {
   )
 }
 
-export default connect()(AddTodo)
+export default connect()(TambahPekerjaan)
